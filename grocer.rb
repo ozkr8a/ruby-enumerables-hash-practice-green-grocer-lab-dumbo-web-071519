@@ -82,8 +82,8 @@ def checkout(cart, coupons)
   
   total = 0
   
-    binding.pry
   cart = consolidate_cart(cart)
+    binding.pry
   
   if cart.length == 1
     cart = apply_coupons(cart, coupons)
