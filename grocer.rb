@@ -82,12 +82,12 @@ def checkout(cart, coupons)
   
   total = 0
   
+    binding.pry
   cart = consolidate_cart(cart)
   
   if cart.length == 1
     cart = apply_coupons(cart, coupons)
     cart_clearance = apply_clearance(cart)
-    binding.pry
     if cart_clearance.length > 1
       cart_clearance.each do |items, details|
         if details[:count] >=1
