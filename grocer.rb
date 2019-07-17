@@ -83,10 +83,10 @@ def checkout(cart, coupons)
   total = 0
   
   cart = consolidate_cart(cart)
-    binding.pry
   
   if cart.length == 1
     cart = apply_coupons(cart, coupons)
+    binding.pry
     cart_clearance = apply_clearance(cart)
     if cart_clearance.length > 1
       cart_clearance.each do |items, details|
